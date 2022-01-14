@@ -33,7 +33,6 @@ dependencies {
     implementation("com.google.code.gson:gson:2.8.5")
     implementation("joda-time:joda-time:2.10.8")
     implementation("com.github.kevinsawicki:http-request:6.0")
-    implementation("com.squareup.okhttp3:okhttp:3.12.13")
     implementation("com.github.TeamNewPipe:nanojson:1d9e1aea9049fc9f85e68b43ba39fe7be1c1f751")
     implementation("com.github.TeamNewPipe:NewPipeExtractor:0.21.12")
 }

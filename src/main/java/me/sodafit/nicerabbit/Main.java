@@ -1,6 +1,6 @@
 package me.sodafit.nicerabbit;
 
-import me.sodafit.nicerabbit.newpipe.DownloaderImpl;
+import me.sodafit.nicerabbit.newpipe.ExtractorDownloader;
 import org.schabi.newpipe.extractor.NewPipe;
 import org.schabi.newpipe.extractor.stream.StreamInfo;
 
@@ -11,10 +11,16 @@ public class Main {
         Main main = new Main();
         main.initNewPipe();
         main.getRealUrl("https://www.youtube.com/watch?v=1uDfnHoPq3w");
+
+        main.startHttpServer();
+    }
+
+    private void startHttpServer() {
+        System.out.println("start http server");
     }
 
     private void initNewPipe() {
-        NewPipe.init(DownloaderImpl.init(null));
+        NewPipe.init(new ExtractorDownloader());
     }
 
     private void getRealUrl(String webpageUrl) {
